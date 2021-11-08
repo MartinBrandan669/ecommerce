@@ -129,8 +129,16 @@ a {
 
 .nav-principal {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     padding: 2rem 0;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .nav-principal {
+        justify-content: space-between;
+        flex-direction: row;
+    }
 }
 
 .navegacion a {
@@ -139,11 +147,17 @@ a {
 }
 
 .hero {
-    height: 55rem;
     background-image: url(../img/principal.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    height: 25rem;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        height: 55rem;
+    }
 }
 
 
