@@ -35,7 +35,7 @@ h1,
 h2,
 h3 {
     font-family: var(--fuenteSecundaria);
-    margin: 0 0 5rem 0;
+    margin: 0 0 2rem 0;
 }
 
 h1 {
@@ -208,22 +208,43 @@ a {
 /* sobre nosotros */
 
 .sobre-nosotros {
-    background-image: linear-gradient(to right, transparent 50%, var(--principal) 50%, var(--principal) 100%), url(../img/nosotros.jpg);
-    padding: 10rem 0;
-    background-position: left center;
+    background-image: linear-gradient(to bottom, transparent 50%, var(--principal) 50%, var(--principal) 100%), url(../img/nosotros.jpg);
+    background-position: center, top left;
     background-repeat: no-repeat;
-    background-size: 100%, 120rem;
+    background-size: 100%, 90rem;
+}
+
+@media (min-width: 768px) {
+    .sobre-nosotros {
+        background-image: linear-gradient(to right, transparent 50%, var(--principal) 50%, var(--principal) 100%), url(../img/nosotros.jpg);
+        background-position: left center;
+        background-size: 100%, 90rem;
+    }
 }
 
 .sobre-nosotros-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 4rem;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+    .sobre-nosotros-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: unset;
+        column-gap: 10rem;
+    }
 }
 
 .texto-nosotros {
-    grid-column: 2 / 3;
+    grid-row: 2 / 3;
     color: var(--blanco);
+    padding: 5rem;
+}
+
+@media (min-width: 768px) {
+    .texto-nosotros {
+        grid-column: 2 / 3;
+    }
 }
 
 
